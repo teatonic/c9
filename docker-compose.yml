@@ -7,8 +7,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
-      - USERNAME=teatonic
-      - PASSWORD=skrtunfr*4R
+      - USERNAME=
+      - PASSWORD=
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #optional
       - ./config:/config/custom-cont-init.d
