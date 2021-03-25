@@ -1,0 +1,19 @@
+version: "2.1"
+services:
+  cloud9:
+    image: ghcr.io/linuxserver/cloud9
+    container_name: cloud9
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - USERNAME=teatonic
+      - PASSWORD=skrtunfr*4R
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+      - ./config:/config/custom-cont-init.d
+    ports:
+      - 8000:8000
+    network_mode: "host"
+    restart: unless-stopped
+
