@@ -7,8 +7,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
-      - USERNAME=
-      - PASSWORD=
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
     volumes:
       - ./config:/config/custom-cont-init.d
     ports:
